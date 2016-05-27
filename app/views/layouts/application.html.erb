@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>TinyHomesSite</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Tiny Homes Canada</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <nav class="top-nav-bar">
+      <%= link_to "Home", home_path %>
+      <%= link_to "Gallery", '#' %>
+      <%= link_to "The Team", '#' %>
+      <%= link_to "Contact Us", '#' %>
+      <%= link_to "FAQ", '#' %>
+    </nav>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+    <nav class="bottom-nav-bar">
+      <div class="social-media-links">
+        <%= link_to "Facebook", '#' %>
+        <%= link_to "Twitter", '#' %>
+        <%= link_to "Instagram", '#' %>
+      </div>
+      <%= link_to "Contact", '#' %>
+      <%= link_to "Privacy", '#' %>
+      <%= link_to "Terms & Conditions", '#' %>
+      <div class="copyright">
+        <p>
+          Copyright © 2016 Example Tiny Houses All Rights Reserved.
+        </p>
+      </div>
+    </nav>
+
+  </body>
 </html>
